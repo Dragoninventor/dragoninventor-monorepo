@@ -16,5 +16,5 @@ services:
             repo: Dragoninventor/dragoninventor-monorepo
 domains:
     -   domain: dragoninventor.com
-        type: primary
+        type: PRIMARY
         zone: dragoninventor.com
