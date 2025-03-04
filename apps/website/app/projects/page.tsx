@@ -27,16 +27,17 @@ const Projects: NextPage = () => {
 						src: haveASafeDriveImage,
 						alt: "Have A Safe Drive website"
 					}}
-					links={[
-						<ProjectCardLink
-							href={
-								"https://github.com/Dragoninventor/have-a-safe-drive"
-							}
-							key={"github"}
-							linkText={"Github"}
-							icon={<FaGithub />}
-						/>
-					]}
+					// Temporarily taking down until I publish the repo
+					// links={[
+					// 	<ProjectCardLink
+					// 		href={
+					// 			"https://github.com/Dragoninventor/have-a-safe-drive"
+					// 		}
+					// 		key={"github"}
+					// 		linkText={"Github"}
+					// 		icon={<FaGithub />}
+					// 	/>
+					// ]}
 				/>
 				<ProjectCard
 					name={"Penn Legal LPP"}
@@ -66,7 +67,7 @@ const Projects: NextPage = () => {
 					links={[
 						<ProjectCardLink
 							href={
-								"https://github.com/Dragoninventor/have-a-safe-drive"
+								"https://github.com/Dragoninventor/dragoninventor-monorepo"
 							}
 							key={"github"}
 							linkText={"Github"}
