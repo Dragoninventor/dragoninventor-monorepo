@@ -1,0 +1,16 @@
+name: dragoninventor
+services:
+    -   name: website
+        image:
+            registry: dragoninventor
+            registry_type: GHCR
+            registry_credentials: ${IMAGE_REGISTRY_CREDENTIALS}
+            repository: ${IMAGE_REPOSITORY}
+            digest: ${IMAGE_DIGEST}
+        envs:
+            -   key: DOTENV_PRIVATE_KEY_PRODUCTION
+                value: ${DOTENV_PRIVATE_KEY_WEBSITE_PRODUCTION}
+                type: SECRET
+        github:
+            branch: main
+            repo: Dragoninventor/dragoninventor-monorepo

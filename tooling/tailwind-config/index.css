@@ -1,0 +1,4 @@
+@import "tailwindcss";
+
+/* noinspection CssInvalidAtRule */
+@source "../../packages/ui/src/components/**/*.{ts,tsx}";

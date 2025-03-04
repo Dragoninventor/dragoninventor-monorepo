@@ -1,0 +1,30 @@
+{
+	"name": "@dragoninventor/ui",
+	"version": "1.0.0",
+	"private": true,
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/src/index.d.ts",
+			"import": "./dist/index.cjs"
+		}
+	},
+	"scripts": {
+		"build": "tsup",
+		"dev": "tsup --watch"
+	},
+	"license": "ISC",
+	"dependencies": {
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0"
+	},
+	"devDependencies": {
+		"@dragoninventor/tsconfig": "*",
+		"@types/react": "^18.3.12",
+		"esbuild-sass-plugin": "^3.3.1",
+		"postcss": "^8.4.49",
+		"sass": "^1.80.6",
+		"tsup": "^8.3.5",
+		"typescript": "^5.6.3"
+	}
+}

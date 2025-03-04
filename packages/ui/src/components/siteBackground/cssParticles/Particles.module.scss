@@ -1,0 +1,82 @@
+.container {
+	.particlesContainer {
+		$particleWidth: 5px;
+		$particleNum: 200;
+
+		position: absolute;
+
+		transform: translateY(-10vh);
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+
+		.particle {
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			//mix-blend-mode: screen;
+			background-color: #c2dbe8;
+
+			animation: fade-frames 2s infinite, scale-frames 4s infinite;
+			//animation: scale-frames 4s infinite;
+
+			@keyframes fade-frames {
+				0% {
+					background-color: #a5c3d3;
+				}
+
+				50% {
+					background-color: #c2dbe8;
+				}
+
+				100% {
+					background-color: #a5c3d3;
+				}
+			}
+
+			@keyframes scale-frames {
+				0% {
+					transform: scale(0.75);
+				}
+
+				50% {
+					transform: scale(1);
+				}
+
+				100% {
+					transform: scale(0.75);
+				}
+			}
+		}
+
+		@for $i from 1 through $particleNum {
+			&:nth-child(#{$i}) {
+				$circleSize: random($particleWidth) + 2;
+
+				$startPosX: random(100);
+				$endPosX: $startPosX + random(15) - random(15);
+				$startPosY: random(10) + 100;
+				$endPosY: -$startPosY - random(30);
+
+				$framesName: "move-frames-" + $i;
+				$moveDuration: 24000 + random(12000) + ms;
+
+				width: $circleSize + px;
+				height: $circleSize + px;
+
+				animation-name: #{$framesName};
+				animation-duration: $moveDuration;
+				animation-delay: random(24000) + ms;
+
+				@keyframes #{$framesName} {
+					from {
+						transform: translate3d(#{$startPosX + vw}, #{$startPosY + vh}, 0);
+					}
+
+					to {
+						transform: translate3d(#{$endPosX + vw}, #{$endPosY + vh}, 0);
+					}
+				}
+			}
+		}
+	}
+}

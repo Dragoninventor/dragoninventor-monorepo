@@ -1,0 +1,55 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"globalEnv": [
+		"NODE_ENV",
+		"DOTENV_PRIVATE_KEY_PRODUCTION"
+	],
+	"tasks": {
+		"dev": {
+			"persistent": true,
+			"cache": false,
+			"inputs": [
+				"$TURBO_DEFAULT$",
+				".env.local"
+			],
+			"env": []
+		},
+		"build": {
+			"dependsOn": [
+				"^build"
+			],
+			"inputs": [
+				"$TURBO_DEFAULT$",
+				".env"
+			],
+			"outputs": [
+				".next/**",
+				"!.next/cache/**",
+				"dist/**"
+			],
+			"passThroughEnv": [
+				"DOTENV_PRIVATE_KEY_PRODUCTION"
+			]
+		},
+		"topo": {
+			"dependsOn": [
+				"^topo"
+			]
+		},
+		"typecheck": {
+			"dependsOn": [
+				"topo"
+			],
+			"outputs": [
+				"node_modules/.cache/tsbuildinfo.json"
+			]
+		},
+		"test": {
+		},
+		"test:watch": {
+			"cache": false,
+			"persistent": true
+		}
+	},
+	"ui": "tui"
+}

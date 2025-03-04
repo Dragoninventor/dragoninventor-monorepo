@@ -1,0 +1,18 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"extends": "@dragoninventor/tsconfig/nextjs.json",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"outDir": "dist",
+		"declaration": true,
+		"declarationMap": true,
+		"tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"
+	},
+	"include": [
+		"."
+	],
+	"exclude": [
+		"dist",
+		"node_modules"
+	]
+}

@@ -1,0 +1,44 @@
+{
+	"name": "@dragoninventor/website",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dotenvx": "dotenvx",
+		"dev": "dotenvx run --convention=nextjs -- next dev",
+		"build": "SKIP_YARN_COREPACK_CHECK=0 dotenvx run -f .env.production -- next build",
+		"start": "dotenvx run --convention=nextjs -- next start",
+		"lint": "dotenvx run --convention=nextjs -- next lint",
+		"test": "dotenvx run --convention=nextjs -- vitest",
+		"test:watch": "dotenvx run -- vitest --watch",
+		"encrypt-env": "cp .env.production.local .env.production && dotenvx encrypt -f .env.production"
+	},
+	"dependencies": {
+		"@dotenvx/dotenvx": "^1.36.0",
+		"@dragoninventor/ui": "*",
+		"@react-email/components": "0.0.33",
+		"@react-email/render": "^1.0.5",
+		"email-validator": "^2.0.4",
+		"luxon": "^3.5.0",
+		"next": "15.1.7",
+		"nodemailer": "^6.10.0",
+		"react": "^19",
+		"react-dom": "^19",
+		"react-icons": "^5.4.0",
+		"sharp": "^0.33.5"
+	},
+	"devDependencies": {
+		"@dragoninventor/tailwind-config": "*",
+		"@types/luxon": "^3.4.2",
+		"@types/node": "^22",
+		"@types/nodemailer": "^6.4.17",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"autoprefixer": "^10.4.20",
+		"eslint": "^9",
+		"eslint-config-next": "15.1.7",
+		"postcss": "^8",
+		"typescript": "^5"
+	},
+	"packageManager": "npm@11.1.0"
+}

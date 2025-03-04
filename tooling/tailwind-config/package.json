@@ -1,0 +1,12 @@
+{
+	"name": "@dragoninventor/tailwind-config",
+	"files": [
+		"index.css",
+		"postcss.config.mjs"
+	],
+	"devDependencies": {
+		"@tailwindcss/language-server": "^0.0.27",
+		"@tailwindcss/postcss": "^4.0.0-beta.2",
+		"tailwindcss": "^4.0.0-beta.2"
+	}
+}

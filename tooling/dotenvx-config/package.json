@@ -1,0 +1,13 @@
+{
+	"name": "@dragoninventor/env",
+	"private": true,
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"start": "dotenvx run --convention=nextjs"
+	},
+	"license": "ISC",
+	"dependencies": {
+		"@dotenvx/dotenvx": "^1.13.2"
+	}
+}

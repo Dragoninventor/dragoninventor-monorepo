@@ -1,0 +1,59 @@
+name: AWS Portfolio Deployment
+
+on:
+    push:
+        branches: [ main ]
+        paths:
+            - apps/aws-portfolio/**
+            - packages/ui/**
+            - tooling/tailwind-config/**
+            - .github/workflows/deploy-aws-portfolio.yaml
+
+permissions:
+    contents: read
+    packages: write
+    actions: write
+    id-token: write
+    repository-projects: read
+
+jobs:
+    deploy-aws-portfolio:
+        runs-on: ubuntu-latest
+        environment: production
+        concurrency:
+            group: aws-portfolio-production
+        steps:
+            -   name: Checkout repository
+                uses: actions/checkout@v4
+
+            -   name: Setup Node
+                uses: actions/setup-node@v4
+                with:
+                    node-version: 20
+
+            -   name: Install AWS CDK
+                run: npm install -g aws-cdk
+
+            -   name: Configure AWS credentials
+                uses: aws-actions/configure-aws-credentials@v4
+                with:
+                    role-to-assume: 'arn:aws:iam::597088032422:role/github-actions-deployment-role'
+                    aws-region: 'us-east-1'
+
+            -   name: Deploy CDK stack
+                run: |
+                    npm install -g turbo@^2 @dotenvx/dotenvx
+                    npm ci
+                    cd packages/ui
+                    npm run build
+                    cd ../..
+                    turbo prune @dragoninventor/aws-portfolio
+                    cd apps/aws-portfolio/backend
+                    npm ci
+                    cd ..
+                    dotenvx run -- turbo run build
+                    cd backend
+                    npm run synth
+                    npm run deploy -- --require-approval never
+                env:
+                    DOTENV_PRIVATE_KEY_PRODUCTION: ${{ secrets.DOTENV_PRIVATE_KEY_AWS_PORTFOLIO_PRODUCTION }}
