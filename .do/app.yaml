@@ -14,3 +14,7 @@ services:
         github:
             branch: main
             repo: Dragoninventor/dragoninventor-monorepo
+domains:
+    -   domain: dragoninventor.com
+        type: primary
+        zone: dragoninventor.com
