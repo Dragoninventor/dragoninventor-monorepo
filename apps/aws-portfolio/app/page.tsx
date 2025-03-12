@@ -138,13 +138,11 @@ export default function Home() {
 						</address>
 					</Section>
 					<Section heading={"Summary of Qualifications"}>
-						<p className={""}>
-							Full-stack web developer with 6+ years of experience
-							building and maintaining websites for various
-							clients. Co-founded the business Have A Safe Drive
-							and built the website that sold online defensive
-							driving courses accepted for our clients across the
-							states.
+						<p>
+							Full-stack web developer with 6+ years of experience building and maintaining websites that
+							are accessible, beautiful, and functional. Co-founded and led the technical development of
+							Have A Safe Drive, creating a seamless online platform for defensive driving courses with
+							certificates accepted for clients across the states.
 						</p>
 					</Section>
 					<Section heading={"Skills"}>
@@ -186,26 +184,21 @@ export default function Home() {
 									}
 								>
 									<li>
-										Built the front and back end of the
-										website from scratch.
+										Designed and coded the front and back end of the website from scratch.
 									</li>
 									<li>
-										Managed server hosting and site
-										administration using Linux.
+										Managed server hosting and site administration using Linux.
 									</li>
 									<li>
-										Added course curriculum to the site,
-										including tests with questions and
-										answers.
+										Implemented full course curriculum functionality, including tests with questions
+										and answers.
 									</li>
 									<li>
-										Created a feature that dynamically
-										generates unique certificates for each
-										customer upon course completion.
+										Created a unique certificate generation feature, automating certificates for
+										customers upon course completion.
 									</li>
 									<li>
-										Handled on-site payments using Stripe
-										for easy purchasing of courses.
+										Handled on-site payments using Stripe for easy on-site purchasing of courses.
 									</li>
 								</ul>
 							</li>
