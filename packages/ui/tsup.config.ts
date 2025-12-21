@@ -4,7 +4,7 @@ import { sassPlugin } from "esbuild-sass-plugin";
 
 export default defineConfig((options) => ({
 	entry: [
-		"src/index.ts",
+		"src/index.ts"
 		// "src/components/siteBackground/cssParticles/Particles.module.scss",
 		// "src/components/card/index.tsx",
 		// "src/components/card/cardContent/index.tsx",
@@ -19,5 +19,5 @@ export default defineConfig((options) => ({
 	onSuccess: async () => {
 		exec("tsc --emitDeclarationOnly");
 	},
-	...options,
+	...options
 }));

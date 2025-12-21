@@ -14,27 +14,27 @@
 		"encrypt-env": "cp .env.production.local .env.production && dotenvx encrypt -f .env.production"
 	},
 	"dependencies": {
-		"@dotenvx/dotenvx": "^1.37.0",
+		"@dotenvx/dotenvx": "^1.51.2",
 		"@dragoninventor/ui": "*",
-		"dotenv": "^16.4.7",
-		"mongoose": "^8.10.1",
-		"next": "15.1.7",
+		"dotenv": "^17.2.3",
+		"mongoose": "^9.0.2",
+		"next": "16.1.0",
 		"react": "^19",
-		"react-dom": "^19.0.0",
-		"react-icons": "^5.4.0",
-		"swr": "^2.3.2"
+		"react-dom": "^19.2.3",
+		"react-icons": "^5.5.0",
+		"swr": "^2.3.8"
 	},
 	"devDependencies": {
 		"@dragoninventor/tailwind-config": "*",
-		"@types/node": "^22",
+		"@types/node": "^25",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
 		"eslint": "^9",
-		"eslint-config-next": "15.1.7",
+		"eslint-config-next": "16.1.0",
 		"postcss": "^8",
-		"prettier": "^3.5.1",
-		"prettier-plugin-tailwindcss": "^0.6.11",
-		"sass": "^1.85.0",
+		"prettier": "^3.7.4",
+		"prettier-plugin-tailwindcss": "^0.7.2",
+		"sass": "^1.97.1",
 		"typescript": "^5"
 	}
 }

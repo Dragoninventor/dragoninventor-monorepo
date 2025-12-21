@@ -1,9 +1,9 @@
 import { Metadata, NextPage } from "next";
-import haveASafeDriveImage from "/public/haveasafedrive.png";
-import pennLegalImage from "/public/pennlegal.png";
-import adviceOnFireImage from "/public/adviceonfire.png";
-import dragoninventorImage from "/public/dragoninventor-site.png";
-import amityAgendaImage from "/public/amity-agenda.png";
+import haveASafeDriveImage from "@/public/haveasafedrive.png";
+import pennLegalImage from "@/public/pennlegal.png";
+import adviceOnFireImage from "@/public/adviceonfire.png";
+import dragoninventorImage from "@/public/dragoninventor-site.png";
+import amityAgendaImage from "@/public/amity-agenda.png";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import ProjectCard from "@/components/projectCard";
 import ProjectCardLink from "@/components/projectCard/projectCardLink";

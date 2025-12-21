@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 import { SiteBackground } from "@dragoninventor/ui";
 import Image from "next/image";
 
-import siteBackgroundImage from "/public/site-background.jpg";
+import siteBackgroundImage from "@/public/site-background.jpg";
 
 import { default_card_font, default_cardpage_font, inter } from "@/fonts";
 import CenteredLayout from "../components/centeredSiteLayout";

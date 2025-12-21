@@ -5,7 +5,7 @@ import { SiteBackground } from "@dragoninventor/ui";
 import Image from "next/image";
 
 import { default_card_font, default_cardpage_font, inter } from "@/fonts";
-import siteBackgroundImage from "/public/site-background.jpg";
+import siteBackgroundImage from "@/public/site-background.jpg";
 import "./globals.css";
 
 export const metadata: Metadata = {

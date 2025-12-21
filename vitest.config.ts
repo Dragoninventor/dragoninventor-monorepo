@@ -10,19 +10,19 @@ export default defineConfig({
 				test: {
 					include: ["**/tests/**/*.browser.test.ts"],
 					name: "happy-dom",
-					environment: "happy-dom",
+					environment: "happy-dom"
 				},
-				plugins: [react(), tsconfigPaths()],
+				plugins: [react(), tsconfigPaths()]
 			},
 			{
 				extends: true,
 				test: {
 					include: ["**/tests/**/*.node.test.ts"],
 					name: "node",
-					environment: "node",
+					environment: "node"
 				},
-				plugins: [react(), tsconfigPaths()],
-			},
-		],
-	},
+				plugins: [react(), tsconfigPaths()]
+			}
+		]
+	}
 });

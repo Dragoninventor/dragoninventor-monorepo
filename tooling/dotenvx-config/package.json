@@ -8,6 +8,6 @@
 	},
 	"license": "ISC",
 	"dependencies": {
-		"@dotenvx/dotenvx": "^1.13.2"
+		"@dotenvx/dotenvx": "^1.51.2"
 	}
 }

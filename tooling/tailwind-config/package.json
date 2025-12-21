@@ -5,8 +5,8 @@
 		"postcss.config.mjs"
 	],
 	"devDependencies": {
-		"@tailwindcss/language-server": "^0.0.27",
-		"@tailwindcss/postcss": "^4.0.0-beta.2",
-		"tailwindcss": "^4.0.0-beta.2"
+		"@tailwindcss/language-server": "^0.14.29",
+		"@tailwindcss/postcss": "^4.1.18",
+		"tailwindcss": "^4.1.18"
 	}
 }

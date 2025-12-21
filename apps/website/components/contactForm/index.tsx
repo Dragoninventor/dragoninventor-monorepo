@@ -16,13 +16,13 @@ const ContactForm = () => {
 	const [form, setForm] = useState<Form>({
 		name: "",
 		email: "",
-		message: "",
+		message: ""
 	});
 	const [formStatus, setFormStatus] = useState<FormStatus>("default");
 	const [errors, setErrors] = useState<Record<string, string>>({});
 
 	const handleChange = (
-		event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+		event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
 	) => {
 		const { name, value } = event.target;
 
@@ -60,13 +60,13 @@ const ContactForm = () => {
 		const response = await fetch("/api/sendEmail", {
 			method: "POST",
 			headers: {
-				"Content-Type": "application/json",
+				"Content-Type": "application/json"
 			},
 			body: JSON.stringify({
 				name: form.name,
 				email: form.email,
-				message: form.message,
-			}),
+				message: form.message
+			})
 		});
 
 		if (response.ok) {
@@ -152,7 +152,7 @@ const ContactForm = () => {
 			<button
 				type={"submit"}
 				className={
-					"flex w-full cursor-pointer items-center justify-center rounded border border-indigo-400 bg-indigo-100 px-5 py-2.5 text-indigo-600 duration-200"
+					"flex w-full cursor-pointer items-center justify-center rounded border border-indigo-400 bg-indigo-100 px-5 py-2.5 text-indigo-600 duration-200 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:rounded-b after:bg-indigo-300"
 				}
 			>
 				Submit
