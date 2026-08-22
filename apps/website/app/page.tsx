@@ -61,7 +61,7 @@ const Home: NextPage = () => {
 					<Link
 						href={"/projects"}
 						className={
-							"relative flex items-center gap-1.5 rounded border border-violet-200 bg-gray-50 px-5 py-2.5 text-gray-600 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:rounded-b after:bg-violet-200"
+							"relative flex items-center gap-1.5 rounded border border-indigo-300 bg-gray-50 px-5 py-2.5 text-slate-600 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:rounded-b after:bg-indigo-300"
 						}
 					>
 						<span>See my work </span>

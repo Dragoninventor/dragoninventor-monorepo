@@ -172,7 +172,7 @@ export default function Home() {
 						</ul>
 					</Section>
 					<Section heading={"Work Experience"}>
-						<ul className={"flex flex-col gap-1.5"}>
+						<ul className={"flex flex-col gap-1.5 text-slate-700"}>
 							<li>
 								<span className={"font-bold text-slate-600"}>
 									Co-founder, Web Developer, and Server Admin
@@ -237,7 +237,7 @@ export default function Home() {
 						</ul>
 					</Section>
 					<Section heading={"Education & Certifications"}>
-						<ul className={"flex flex-col gap-1.5"}>
+						<ul className={"flex flex-col gap-1.5 text-slate-700"}>
 							<li>Graduated high school on May 25, 2022.</li>
 							<li>
 								Completed the Bottega Full-Stack Development
