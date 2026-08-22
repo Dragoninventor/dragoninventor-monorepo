@@ -26,7 +26,7 @@ const StyledImage = ({
 				className={`object-cover rounded${className ? ` ${className}` : ""}`}
 				{...props}
 			/>
-			<div className="absolute left-0 top-0 h-full w-full rounded shadow-inner shadow-slate-600/30" />
+			<div className="absolute top-0 left-0 h-full w-full rounded shadow-inner shadow-slate-600/30" />
 		</div>
 	);
 };

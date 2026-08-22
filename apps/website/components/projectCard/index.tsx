@@ -22,7 +22,7 @@ const ProjectCard = ({
 		<>
 			<li
 				className={
-					"flex w-full rounded border border-gray-200 bg-slate-50 px-1.5 pb-2.5 pt-1.5"
+					"flex w-full rounded border border-gray-200 bg-slate-50 px-1.5 pt-1.5 pb-2.5 shadow-sm shadow-gray-400/15"
 				}
 			>
 				<StyledImage
@@ -32,7 +32,7 @@ const ProjectCard = ({
 				/>
 				<div
 					className={
-						"ml-4 mt-1.5 flex w-1/2 flex-col sm:mt-2.5 sm:w-2/3 md:mt-2.5"
+						"mt-1.5 ml-4 flex w-1/2 flex-col sm:mt-2.5 sm:w-2/3 md:mt-2.5"
 					}
 				>
 					<h2 className={"text-md mb-0.5 text-gray-900"}>{name}</h2>

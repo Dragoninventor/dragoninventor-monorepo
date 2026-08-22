@@ -1,16 +1,17 @@
 import { Metadata, NextPage } from "next";
 import haveASafeDriveImage from "@/public/haveasafedrive.png";
 import pennLegalImage from "@/public/pennlegal.png";
-import adviceOnFireImage from "@/public/adviceonfire.png";
+import adviceOnFireImage from "@/public/adviceonfire_alt.png";
 import dragoninventorImage from "@/public/dragoninventor-site.png";
 import amityAgendaImage from "@/public/amity-agenda.png";
+import angelicPastriesImage from "@/public/angelicpastries_alt.png";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import ProjectCard from "@/components/projectCard";
 import ProjectCardLink from "@/components/projectCard/projectCardLink";
 import { CardContent } from "@dragoninventor/ui";
 
 export const metadata: Metadata = {
-	title: "My Projects"
+	title: "My Projects",
 };
 
 const Projects: NextPage = () => {
@@ -19,13 +20,63 @@ const Projects: NextPage = () => {
 			<h1 className={`mb-7 text-center`}>My Projects</h1>
 			<ul className={"grid gap-4"}>
 				<ProjectCard
+					name={"Angelic Pastries"}
+					description={
+						"The online storefront for a local business selling high-quality macarons."
+					}
+					image={{
+						src: angelicPastriesImage,
+						alt: "Angelic Pastries website",
+					}}
+					links={[
+						<ProjectCardLink
+							href={"https://angelicpastries.com/"}
+							key={"website"}
+							linkText={"Website"}
+							icon={<FaExternalLinkAlt />}
+						/>,
+						<ProjectCardLink
+							href={
+								"https://github.com/Dragoninventor/angelic-pastries"
+							}
+							key={"github"}
+							linkText={"Github"}
+							icon={<FaGithub />}
+						/>,
+					]}
+				/>
+				<ProjectCard
+					name={"Advice On Fire"}
+					description={"The blog for a wise writer and friend."}
+					image={{
+						src: adviceOnFireImage,
+						alt: "Advice On Fire website",
+					}}
+					links={[
+						<ProjectCardLink
+							href={"https://adviceonfire.com/"}
+							key={"website"}
+							linkText={"Website"}
+							icon={<FaExternalLinkAlt />}
+						/>,
+						<ProjectCardLink
+							href={
+								"https://github.com/Dragoninventor/advice-on-fire"
+							}
+							key={"github"}
+							linkText={"Github"}
+							icon={<FaGithub />}
+						/>,
+					]}
+				/>
+				<ProjectCard
 					name={"Have A Safe Drive"}
 					description={
 						"A website for online defensive driving courses."
 					}
 					image={{
 						src: haveASafeDriveImage,
-						alt: "Have A Safe Drive website"
+						alt: "Have A Safe Drive website",
 					}}
 					// Temporarily taking down until I publish the repo
 					// links={[
@@ -44,16 +95,16 @@ const Projects: NextPage = () => {
 					description={"The portfolio of a talented paralegal."}
 					image={{
 						src: pennLegalImage,
-						alt: "Penn Legal LPP website"
+						alt: "Penn Legal LPP website",
 					}}
-					links={[
-						<ProjectCardLink
-							href={"https://pennlegallpp.com/"}
-							key={"website"}
-							linkText={"Website"}
-							icon={<FaExternalLinkAlt />}
-						/>
-					]}
+					// links={[
+					// 	<ProjectCardLink
+					// 		href={"https://pennlegallpp.com/"}
+					// 		key={"website"}
+					// 		linkText={"Website"}
+					// 		icon={<FaExternalLinkAlt />}
+					// 	/>
+					// ]}
 				/>
 				<ProjectCard
 					name={"Dragoninventor Monorepo"}
@@ -62,7 +113,7 @@ const Projects: NextPage = () => {
 					}
 					image={{
 						src: dragoninventorImage,
-						alt: "Dragoninventor website"
+						alt: "Dragoninventor website",
 					}}
 					links={[
 						<ProjectCardLink
@@ -72,23 +123,7 @@ const Projects: NextPage = () => {
 							key={"github"}
 							linkText={"Github"}
 							icon={<FaGithub />}
-						/>
-					]}
-				/>
-				<ProjectCard
-					name={"Advice On Fire"}
-					description={"The blog for a wise writer and friend."}
-					image={{
-						src: adviceOnFireImage,
-						alt: "Advice On Fire website"
-					}}
-					links={[
-						<ProjectCardLink
-							href={"https://adviceonfire.com/"}
-							key={"website"}
-							linkText={"Website"}
-							icon={<FaExternalLinkAlt />}
-						/>
+						/>,
 					]}
 				/>
 				<ProjectCard
@@ -98,7 +133,7 @@ const Projects: NextPage = () => {
 					}
 					image={{
 						src: amityAgendaImage,
-						alt: "Have A Safe Drive website"
+						alt: "Have A Safe Drive website",
 					}}
 				/>
 			</ul>
