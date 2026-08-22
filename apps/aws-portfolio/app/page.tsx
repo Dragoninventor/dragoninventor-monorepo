@@ -23,7 +23,7 @@ import {
 	SiSass,
 	SiStripe,
 	SiTailwindcss,
-	SiTypescript
+	SiTypescript,
 } from "react-icons/si";
 import { CardContent, CardFooter, CardPage } from "@dragoninventor/ui";
 import PageHitsCounter from "@/components/pageHitsCounter";
@@ -31,10 +31,10 @@ import PageHitsCounter from "@/components/pageHitsCounter";
 const montserrat = Montserrat({ subsets: ["latin"], weight: ["300", "500"] });
 
 const Section = ({
-					 heading,
-					 children,
-					 className
-				 }: {
+	heading,
+	children,
+	className,
+}: {
 	heading?: ReactNode;
 	children: ReactNode;
 	className?: string;
@@ -58,9 +58,9 @@ const SectionHeading = ({ children }: { children: ReactNode }) => {
 };
 
 const Skill = ({
-				   icon,
-				   children
-			   }: {
+	icon,
+	children,
+}: {
 	icon: ReactNode;
 	children: ReactNode;
 }) => {
@@ -87,7 +87,7 @@ export default function Home() {
 						<Image
 							src={Logo}
 							alt={"Logo"}
-							className={"w-full max-w-[14rem] md:max-w-sm"}
+							className={"w-full max-w-56 md:max-w-sm"}
 						/>
 					</div>
 					<h1
@@ -139,10 +139,13 @@ export default function Home() {
 					</Section>
 					<Section heading={"Summary of Qualifications"}>
 						<p>
-							Full-stack web developer with 6+ years of experience building and maintaining websites that
-							are accessible, beautiful, and functional. Co-founded and led the technical development of
-							Have A Safe Drive, creating a seamless online platform for defensive driving courses with
-							certificates accepted for clients across the states.
+							Full-stack web developer with 6+ years of experience
+							building and maintaining websites that are
+							accessible, beautiful, and functional. Co-founded
+							and led the technical development of Have A Safe
+							Drive, creating a seamless online platform for
+							defensive driving courses with certificates accepted
+							for clients across the states.
 						</p>
 					</Section>
 					<Section heading={"Skills"}>
@@ -175,6 +178,27 @@ export default function Home() {
 						<ul className={"flex flex-col gap-1.5 text-slate-700"}>
 							<li>
 								<span className={"font-bold text-slate-600"}>
+									Web Developer and Server Admin for Angelic
+									Pastries
+								</span>
+								<ul
+									className={
+										"list-inside list-disc pl-4 sm:pl-7"
+									}
+								>
+									<li>
+										Built an ecommerce website for a local
+										business selling macarons and catering.
+									</li>
+									<li>
+										Implemented a local backend dashboard
+										for managing products, pricing, and
+										more.
+									</li>
+								</ul>
+							</li>
+							<li>
+								<span className={"font-bold text-slate-600"}>
 									Co-founder, Web Developer, and Server Admin
 									for Have A Safe Drive
 								</span>
@@ -184,36 +208,21 @@ export default function Home() {
 									}
 								>
 									<li>
-										Designed and coded the front and back end of the website from scratch.
+										Built a website for buying and taking
+										online courses from scratch.
 									</li>
 									<li>
-										Managed server hosting and site administration using Linux.
+										Managed server hosting and site
+										administration using Linux.
 									</li>
 									<li>
-										Implemented full course curriculum functionality, including tests with questions
-										and answers.
-									</li>
-									<li>
-										Created a unique certificate generation feature, automating certificates for
+										Created a unique certificate generation
+										feature, automating certificates for
 										customers upon course completion.
 									</li>
 									<li>
-										Handled on-site payments using Stripe for easy on-site purchasing of courses.
-									</li>
-								</ul>
-							</li>
-							<li>
-								<span className={"font-bold text-slate-600"}>
-									Web Developer for Penn Legal, LLC
-								</span>
-								<ul
-									className={
-										"list-inside list-disc pl-4 sm:pl-7"
-									}
-								>
-									<li>
-										Built the front end for the website of a
-										talented paralegal.
+										Handled on-site payments using Stripe
+										for easy on-site purchasing of courses.
 									</li>
 								</ul>
 							</li>
@@ -258,7 +267,7 @@ export default function Home() {
 							do despite my limitations.
 						</p>
 						<p>
-							Over the past nine years, I have dedicated myself to
+							Over the past ten years, I have dedicated myself to
 							learning everything I could about web development
 							and coding in general. One of my top priorities in
 							web development is accessibility. I strive to
